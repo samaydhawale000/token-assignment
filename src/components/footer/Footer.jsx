@@ -10,11 +10,11 @@ const Footer = () => {
         <div className="footer-about">
           <div>
             <img src={logo} />
-          <h3>BlueMart</h3>
+            <h3>BlueMart</h3>
           </div>
           <p>
-            We provide cutting-edge web, mobile, and UI/UX solutions to grow
-            your digital presence.
+            Your one-stop destination for trendy fashion, premium electronics,
+            and stylish accessories.
           </p>
         </div>
 

@@ -1,3 +1,23 @@
 .pageNotFound{
     width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageNotFound img{
+    width: 40%;
+    object-fit: contain;
+}
+
+.products-page{
+    margin: 40px 0px;
+}
+
+.ProductDetails{
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+    margin-bottom: 50px;
 }

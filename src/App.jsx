@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="main-layout">
       <Navbar />
-      <AllRoutes />
+      <div className="page-layout">
+        <AllRoutes />
+      </div>
       <Footer />
     </div>
   );
