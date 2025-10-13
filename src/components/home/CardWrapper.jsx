@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./home.css";
-import { CardHorizontal } from "../../commonComponents/cardHorizontal";
+import { CardHorizontal } from "../../commonComponents/CardHorizontal";
 import { fetchProducts } from "../../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";

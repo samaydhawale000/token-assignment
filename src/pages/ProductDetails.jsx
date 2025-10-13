@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../redux/productSlice";
-import { CardHorizontal } from "../commonComponents/cardHorizontal";
+import { CardHorizontal } from "../commonComponents/CardHorizontal";
 
 export default function ProductDetails() {
   const { id } = useParams();

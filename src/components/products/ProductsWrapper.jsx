@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { CardHorizontal } from "../../commonComponents/cardHorizontal";
+import { CardHorizontal } from "../../commonComponents/CardHorizontal";
 import { useNavigate } from "react-router-dom";
 import "./products.css";
 import { fetchProducts } from "../../redux/productSlice";
