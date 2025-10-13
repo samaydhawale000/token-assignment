@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CardHorizontal } from "../commonComponents/cardHorizontal";
+import { CardHorizontal } from "../commonComponents/CardHorizontal";
 
 export default function Favorite() {
   const favorites = useSelector((state) => state.favorites.items);
