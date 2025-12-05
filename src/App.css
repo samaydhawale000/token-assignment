@@ -2,3 +2,87 @@
   max-width: 95%;
   margin: auto;
 }
+
+
+/* -----------------table css -------------------- */
+.tableWrapper {
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #38383b;
+  border-radius: 10px !important;
+  position: relative;
+  height: fit-content;
+  min-height: 30vh;
+  margin-top: 16px;
+}
+
+.tableWrapper > table {
+  width: 100%;
+  table-layout: fixed;
+  border-radius: 10px !important;
+}
+
+.tableWrapper > table > thead {
+  width: 100%;
+}
+
+.tableWrapper > table > thead th {
+  height: 45px;
+  padding: 0px 20px;
+  background-color: #27272A;
+  font-weight: 400;
+  position: sticky;
+  top: 0px;
+  z-index: 12;
+  color: #A1A1AA;
+  border: none;
+  font-size: 14px;
+  text-align: start;
+  border-bottom: 1px solid #38383B;
+
+}
+
+.tableWrapper > table > tbody td {
+  font-weight: 400;
+  padding: 14px 20px;
+  font-size: 14px;
+   position: relative;
+}
+
+.tableWrapper > table > tbody tr:hover{
+ background-color: #27272A;
+}
+
+.col_50px {
+  width: 50px;
+}
+.col_100px {
+  width: 100px;
+}
+
+.col_150px {
+  width: 150px;
+}
+
+.col_200px {
+  width: 200px;
+}
+
+.col_250px {
+  width: 250px;
+}
+
+.col_300px {
+  width: 300px;
+}
+
+.col_350px {
+  width: 350px;
+}
+/* ------------------------- */
+
+
+/* ------------------ Srollbar Css ------------------ */
+::-webkit-scrollbar {
+  display: none;
+}

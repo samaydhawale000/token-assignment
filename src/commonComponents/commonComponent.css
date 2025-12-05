@@ -1,73 +1,69 @@
-.common-button{
-    padding: 8px 20px;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 6px;
-    background-color: #0b1834;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.common-button {
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: #a9e851;
+  border: 2px solid #1f6619;
+  outline: none;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.common-button:hover{
-    background-color: #172a4e;
-     transform: scale(1.02); 
-    transition: all 0.2s ease-in-out;
-}
-
-.card-horizontal{
-    box-sizing: border-box;
-    padding: 20px;
-    width: 100%;
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
-    transition: all 0.2s ease-in-out;
-}
-.card-horizontal > img{
-    width: 60%;
-    height: 150px;
-    object-fit: contain;
-}
-.card-horizontal > p{
-    margin-bottom: 0px;
-    font-weight: 500;
-}
-.card-horizontal > h4{
-    margin-bottom: 0px;
-       text-align: center;
-        font-weight: 500;
+.common-button:hover {
+   background-color: #e94646;
 }
 
-.card-horizontal:hover{
-    box-shadow: rgba(13, 8, 168, 0.40) 0px 2px 8px 0px;
-    transform: scale(1.02); 
-    transition: all 0.2s ease-in-out;
+.SearchInput {
+  width: 200px;
+  height: 34px;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0px 10px;
 }
 
-.SearchInput{
-    width: 200px;
-    height: 34px;
-    border-radius: 6px ;
-    font-size: 16px;
-    padding: 0px 10px;
+.SelectBox {
+  font-size: 16px;
+  padding: 0px 10px;
 }
 
-.SelectBox{
-    font-size: 16px;
-    padding: 0px 10px;
+.favorite-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 233, 233);
 }
 
-.favorite-btn{
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    padding: 4px 10px;
-    border-radius: 10px;
-    background-color: rgb(255, 233, 233);
+.BlackButton {
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 7px;
+  background-color: #27272a;
+  border: 2px solid rgb(15, 15, 15);
+  border-top: 1px solid #3c3c3f;
+  outline: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.BlackButton:hover {
+ background-color: #323235;
+}
+
+.common-button:disabled{
+  cursor: not-allowed;
+  color: rgba(82, 82, 91, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: transparent;
 }

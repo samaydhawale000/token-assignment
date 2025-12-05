@@ -1,0 +1,361 @@
+.totalPortfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 28px;
+  border-radius: 20px;
+  background-color: #27272a;
+  h1 {
+    font-size: 50px;
+    margin: 0px;
+    margin-top: 16px;
+    font-weight: 500;
+  }
+}
+
+.title {
+  font-weight: 400;
+  color: rgba(161, 161, 170, 1);
+  font-size: 17px;
+  margin: 0px;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.leftSection > p {
+  color: rgba(161, 161, 170, 1);
+  font-size: 12px;
+  margin: 0px;
+}
+
+.legendsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.rightWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+.wishlistContainer {
+  margin-top: 40px;
+}
+.wishlistContainer > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wishlistContainer span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wishlistContainer span > p {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.wishlistContainer > div > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.noDataAvailableWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #a1a1aa;
+  font-size: 18px;
+}
+
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #a1a1aa;
+  position: sticky;
+  bottom: 0px;
+  background-color: #212124;
+  right: 0px;
+  left: 0px;
+  border-top: 1px solid #38383b;
+  padding: 16px 20px;
+}
+.tableFooter > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.tableFooter > div > button {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  color: #a1a1aa;
+  font-size: 14px;
+  cursor: pointer;
+}
+.tableFooter > div > button:hover {
+  color: white;
+}
+
+.tableNameWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+  img {
+    width: 34px;
+    height: 34px;
+  }
+}
+.tableFooter p {
+  margin: 0px;
+}
+
+.menuCell {
+  position: relative;
+}
+
+.moreIcon {
+  cursor: pointer;
+}
+
+.editDeletePopup {
+  position: absolute;
+  top: -10px;
+  right: 80px;
+  background: #27272a;
+  border-radius: 12px;
+  border: 1px solid #1e1e21;
+  padding: 8px 0;
+  width: 160px;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popupItem {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #e4e4e7;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.editDeletePopup > :first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.popupItem.delete {
+  color: #fda4af;
+}
+
+.holdingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 100%;
+}
+.holdingWrapper input {
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid rgba(169, 232, 81, 1);
+  padding: 8px;
+  width: 90px;
+  border-radius: 7px;
+  color: white;
+  outline: 3px solid rgba(169, 232, 81, 0.2);
+  outline-offset: 0px;
+}
+
+.holdingWrapper input[type="number"]::-webkit-inner-spin-button,
+.holdingWrapper input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/* ------------------Add Token Model --------------- */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 33, 36, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalCard {
+  width: 46%;
+  background: rgba(33, 33, 36, 1);
+  border-radius: 12px;
+  color: white;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: rgba(113, 113, 122, 1);
+  outline: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.label {
+  margin: 16px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: rgba(113, 113, 122, 1);
+}
+
+.tokenList {
+  max-height: 330px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding: 0px 6px;
+}
+
+.tokenRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tokenRow:hover {
+  background: rgba(169, 232, 81, 0.06);
+}
+
+.selectedRow {
+  background: rgba(169, 232, 81, 0.06);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.left span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.left img{
+    width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #38383b;
+}
+.right img {
+  width: 18px ;
+  height: 18px ;
+  border-radius: 50%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.radio {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #999;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+  background-color: rgba(39, 39, 42, 1);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer > button {
+  border-radius: 7px;
+}
+
+.wishlistBtn {
+  padding: 10px 20px;
+  background: #9ee86a;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------Media Query------------ */
+@media (max-width: 1200px) {
+  .modalCard {
+  width: 66%;
+  }
+}
+@media (max-width: 900px) {
+  .rightWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  .totalPortfolio {
+    h1 {
+      font-size: 42px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .totalPortfolio {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .wishlistContainer span > p {
+    font-size: 18px;
+    margin: 0px;
+  }
+  .totalPortfolio {
+    h1 {
+      font-size: 35px;
+    }
+  }
+  .refreshButton {
+    display: none !important;
+  }
+      .modalCard {
+  width: 76%;
+  }
+}
+@media (max-width: 550px) {
+  .tableFooter {
+    flex-direction: column;
+  }
+      .modalCard {
+  width: 94%;
+  }
+}

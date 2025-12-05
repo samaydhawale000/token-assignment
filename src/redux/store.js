@@ -1,12 +1,11 @@
-// src/store/index.js
 import { configureStore } from "@reduxjs/toolkit";
-import productReducer from "./productSlice";
-import favoritesReducer from "./favoritesSlice";
+import tokenReducer from "./tokenSlice";
+import portfolioReducer from "./portfolioSlice"; 
 
 const store = configureStore({
   reducer: {
-    products: productReducer,
-     favorites: favoritesReducer,
+    tokens: tokenReducer,
+    portfolio: portfolioReducer, 
   },
 });
 
