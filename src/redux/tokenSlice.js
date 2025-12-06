@@ -85,6 +85,7 @@ const tokenSlice = createSlice({
       })
       .addCase(getTokens.rejected, (state) => {
         state.loading = false;
+        state.hasMore = false;
       })
 
       //   Search -----------------
@@ -97,6 +98,7 @@ const tokenSlice = createSlice({
       })
       .addCase(searchTokens.rejected, (state) => {
         state.searching = false;
+        state.hasMore = false;
       });
   },
 });

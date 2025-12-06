@@ -59,7 +59,7 @@ const toggleSelection = (id) => {
       if (!el) return;
 
       if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2) {
-        if ((!loading && !searching, hasMore)) {
+        if ((!loading && !searching && hasMore)) {
           dispatch(getTokens({ page: page + 1 }));
         }
       }
@@ -136,7 +136,7 @@ useEffect(() => {
             );
           })}
 
-          {(loading || searching) && <p className="loading">Loading...</p>}
+          {((loading || searching) && hasMore) && <p className="loading">Loading...</p>}
         </div>
 
         <div className="footer">

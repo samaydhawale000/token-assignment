@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
 import { useSelector, useDispatch } from "react-redux";
-import { updateHoldings, removeToken } from "../../redux/portfolioSlice";
-
+import { updateHoldings, removeToken, refreshPortfolioPrices } from "../../redux/portfolioSlice";
 import star from "../../assets/star.svg";
 import plus from "../../assets/plus.svg";
 import refresh from "../../assets/refresh.svg";
 import more from "../../assets/more.svg";
 import edit from "../../assets/edit.svg";
 import deleteIcon from "../../assets/delete.svg";
-
 import BlackButton from "../../commonComponents/BlackButton";
 import Button from "../../commonComponents/Button";
 import Sparkline from "./Sparkline";
 import AddTokenModal from "./AddTokenModal";
 import Footer from "./Footer";
 
+
 export default function Wishlist() {
   const [openIndex, setOpenIndex] = useState(null);
   const [openEdit, setOpenEdit] = useState(false);
   const [open, setOpen] = useState(false);
   const portfolio = useSelector((s) => s.portfolio.tokens || []);
+  const { refreshLoading } = useSelector((s) => s.portfolio);
   const dispatch = useDispatch();
   const [tempData, setTempData] = useState([]);
   const [page, setPage] = useState(1);
@@ -64,8 +64,8 @@ export default function Wishlist() {
         </div>
 
         <div>
-          <BlackButton>
-            <img src={refresh} alt="plus Icon" />{" "}
+          <BlackButton   onClick={() => dispatch(refreshPortfolioPrices())}>
+            <img src={refresh} alt="plus Icon" className={refreshLoading ? 'loadIcon' : ''} />{" "}
             <span className="refreshButton"> Refresh Prices</span>
           </BlackButton>
 
@@ -95,7 +95,7 @@ export default function Wishlist() {
               return (
                 <tr key={item.id}>
                   <td className="tableNameWrapper">
-                    <img src={item.image} alt="coin icon" /> {item.name}
+                    <img src={item.image} alt="coin icon" /> {item.name} <span style={{color:'rgba(161, 161, 170, 1)'}}>({item.symbol})</span>
                   </td>
 
                   <td style={{ color: "#A1A1AA" }}>
@@ -203,7 +203,8 @@ export default function Wishlist() {
         {tempData.length === 0 && (
           <h6 className="noDataAvailableWrapper">No Data Available</h6>
         )}
-        <Footer page={page} setPage={setPage} tempData={tempData} startIndex={startIndex } endIndex={endIndex } totalPages={totalPages }/>
+        {tempData.length > 0 && <Footer page={page} setPage={setPage} tempData={tempData} startIndex={startIndex } endIndex={endIndex } totalPages={totalPages }/>}
+        
       </div>
 
       <AddTokenModal open={open} onClose={() => setOpen(false)} />
