@@ -15,7 +15,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@metamask/sdk": "^0.33.1",
-    "@rainbow-me/rainbowkit": "2.2.9",
+    "@rainbow-me/rainbowkit": "^2.2.9",
     "@reduxjs/toolkit": "^2.9.0",
     "@tanstack/react-query": "^5.90.2",
     "@walletconnect/ethereum-provider": "^2.21.10",
@@ -30,8 +30,8 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.9.4",
     "react-toastify": "^11.0.5",
-    "viem": "2.21.13",
-    "wagmi": "2.10.2"
+    "viem": "^2.21.13",
+    "wagmi": "^2.10.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
